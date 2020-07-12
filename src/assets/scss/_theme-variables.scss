@@ -1,0 +1,40 @@
+// breakpoints
+$breakpoint-mobile: 470px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 850px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+:root {
+
+  --font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --font-size-small: 12px;
+
+  // Colors
+  --charcoal: #333333;
+  --electric-blue: #0892d0;
+  --ice: #d9f2fe;
+
+  --primary-color: #0892d0;
+  --header-bg: #333;
+
+  --home-link-color: #0892d0;
+  --home-link-hover-color: var(--primary-color);
+
+  --button-color: #d9f2fe;
+  --button-alternate-color: #0892d0;
+
+  --post-link-color: #0F070B;
+
+
+  --nav-link-hover-bg: #111;
+  --text-color-meta: rgba(0, 0, 0, 0.5);
+
+  --label-text: rgba(0, 0, 0, 0.5);
+  --input-focus-border: #0892d0;
+
+  // CSS Grid Utility
+  --grid-gap: 30px;
+
+}
