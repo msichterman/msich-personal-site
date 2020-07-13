@@ -10,6 +10,10 @@ const netlifyCmsPaths = {
   },
 }
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const settings = require("./src/util/site.json")
 
 module.exports = {
@@ -97,5 +101,37 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GITHUB_API_TOKEN,
+        variables: {},
+        graphQLQuery: `
+        query {
+          viewer {
+            repositories(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
+              nodes {
+                id
+                name
+                description
+                createdAt
+                resourcePath
+                languages(first: 10) {
+                  nodes {
+                    name
+                    color
+                    id
+                  }
+                }
+                licenseInfo {
+                  name
+                }
+              }
+            }
+          }
+        }
+        `,
+      },
+    },
   ],
 }

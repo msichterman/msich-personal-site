@@ -2,5 +2,15 @@
 [![MSICH - Personal Site](https://img.shields.io/badge/MSICH-Personal%20Site-0892d0)](https://msich.netlify.app/)&emsp;
 [![Twitter Follow](https://img.shields.io/twitter/follow/mattsichterman?style=social)](https://twitter.com/mattsichterman)&emsp;
 [![Follow on GitHub](https://img.shields.io/github/followers/msichterman?label=Follow%20on%20Github&style=social)](https://github.com/msichterman)&emsp;
+
 # [MSICH](https://msich.netlify.app/)
-Welcome to my personal website and blog! 
+
+Welcome to my personal website and blog! Created with Gastby.js.
+
+## Motivation
+
+WIP
+
+## Technologies in Use
+
+WIP
