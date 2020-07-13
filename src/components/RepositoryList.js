@@ -29,7 +29,7 @@ const RepositoryHeader = ({ repo }) => {
       <GitHubButton
         href={`https://github.com${repo.resourcePath}`}
         data-size="large"
-        aria-label="Star repo on GitHub"
+        aria-label="Visit repo on GitHub"
       >
         Visit
       </GitHubButton>
