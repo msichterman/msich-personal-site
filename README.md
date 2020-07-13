@@ -5,4 +5,12 @@
 
 # [MSICH](https://msich.netlify.app/)
 
-Welcome to my personal website and blog!
+Welcome to my personal website and blog! Created with Gastby.js.
+
+## Motivation
+
+WIP
+
+## Technologies in Use
+
+WIP
