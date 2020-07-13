@@ -28,11 +28,10 @@ const RepositoryHeader = ({ repo }) => {
       </h4>
       <GitHubButton
         href={`https://github.com${repo.resourcePath}`}
-        dataIcon="octicon-star"
-        dataSize="large"
-        ariaLabel="Star repo on GitHub"
+        data-size="large"
+        aria-label="Star repo on GitHub"
       >
-        Star
+        Visit
       </GitHubButton>
     </div>
   )
@@ -51,6 +50,7 @@ const RepositoryFooter = ({ repo }) => {
       <div style={{ margin: "1em 0" }}>
         {repo.languages.nodes &&
           repo.languages.nodes.map(language => {
+            let color = language.color ? language.color : "#d9f2fe"
             return (
               <FooterItem key={language.id}>
                 <span
@@ -61,7 +61,7 @@ const RepositoryFooter = ({ repo }) => {
                     position: `relative`,
                     top: 1,
                     width: 12,
-                    backgroundColor: language.color,
+                    backgroundColor: color,
                   }}
                 />{" "}
                 {language.name}
