@@ -45,6 +45,10 @@ export const pageQuery = graphql`
 const HomePage = ({ data }) => {
   const { mdx } = data // data.mdx holds your post data
   const { frontmatter, body } = mdx
+  const m = frontmatter.title.substring(0, 1)
+  const att = frontmatter.title.substring(1, 4)
+  const sich = frontmatter.title.substring(5, 9)
+  const terman = frontmatter.title.substring(9)
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.fluid
     : ""
@@ -53,7 +57,11 @@ const HomePage = ({ data }) => {
       <SEO />
       <div className="home-banner grids col-1 md-2">
         <div>
-          <h1 className="title">{frontmatter.title}</h1>
+          <h1 className="title">
+            <span>{m}</span>
+            {att} <span>{sich}</span>
+            {terman}
+          </h1>
           <p className="tagline">{frontmatter.tagline}</p>
           <div className="description">
             <MDXRenderer>{body}</MDXRenderer>
