@@ -115,7 +115,8 @@ module.exports = {
                 name
                 description
                 createdAt
-                resourcePath
+                url
+                homepageUrl
                 languages(first: 10) {
                   nodes {
                     name
@@ -125,6 +126,9 @@ module.exports = {
                 }
                 licenseInfo {
                   name
+                }
+                stargazers {
+                  totalCount
                 }
               }
             }

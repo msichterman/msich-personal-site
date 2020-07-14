@@ -1,7 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Octicon, { Law } from "@githubprimer/octicons-react"
+import Octicon, { Law, Star } from "@githubprimer/octicons-react"
 import GitHubButton from "react-github-btn"
+import { RiExternalLinkLine } from "react-icons/ri"
 import { ExternalLink } from "./ExternalLink"
 
 const RepositoryHeader = ({ repo }) => {
@@ -22,16 +23,15 @@ const RepositoryHeader = ({ repo }) => {
           fontSize: 20,
         }}
       >
-        <ExternalLink url={`https://github.com${repo.resourcePath}`}>
-          {repo.name}
-        </ExternalLink>
+        <ExternalLink url={repo.url}>{repo.name}</ExternalLink>
       </h4>
       <GitHubButton
-        href={`https://github.com${repo.resourcePath}`}
+        href={repo.url}
+        data-icon="octicon-star"
         data-size="large"
         aria-label="Visit repo on GitHub"
       >
-        Visit
+        Star
       </GitHubButton>
     </div>
   )
@@ -69,6 +69,9 @@ const RepositoryFooter = ({ repo }) => {
             )
           })}
       </div>
+      <FooterItem>
+        <Octicon icon={Star} /> {repo.stargazers.totalCount}
+      </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
           <Octicon icon={Law} /> {repo.licenseInfo.name}
@@ -87,7 +90,11 @@ const RepositoryDescription = ({ repo }) => (
       {repo.homepageUrl && (
         <>
           {" -"}{" "}
-          <ExternalLink url={repo.homepageUrl}>{repo.homepageUrl}</ExternalLink>
+          <ExternalLink url={repo.homepageUrl}>
+            <strong>
+              See it Live <RiExternalLinkLine />
+            </strong>
+          </ExternalLink>
         </>
       )}
     </p>
@@ -128,7 +135,8 @@ export const RepositoryList = () => {
                     description
                     id
                     name
-                    resourcePath
+                    url
+                    homepageUrl
                     languages {
                       nodes {
                         color
@@ -138,6 +146,9 @@ export const RepositoryList = () => {
                     }
                     licenseInfo {
                       name
+                    }
+                    stargazers {
+                      totalCount
                     }
                   }
                 }
