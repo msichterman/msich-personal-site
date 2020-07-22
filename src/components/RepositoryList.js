@@ -118,7 +118,15 @@ const Repository = ({ repo }) => {
 }
 
 const RepositorySectionMaker = ({ data }) => (
-  <div className="grids smd-2 col-1">{data}</div>
+  <>
+    <div className="grids smd-2 col-1">{data}</div>
+    <ExternalLink
+      url="https://github.com/msichterman"
+      className="button  margin-top"
+    >
+      See more on GitHub
+    </ExternalLink>
+  </>
 )
 
 export const RepositoryList = () => {

@@ -31,6 +31,10 @@
 	}
 }
 
+.margin-top {
+	margin-top: 1em;
+}
+
 /****************************************************************************************************/
 /* 				HEADER PROPERTIES					*/
 /* ┌──────────────┬───────────────┐ */
@@ -193,10 +197,10 @@
 		font-weight: 900;
 		color: var(--charcoal);
 
-		span {
-			/* border-bottom: solid 2px
-			border-color: var(--electric-blue); */
-		}
+		/* span {
+			border-bottom: solid 2px
+			border-color: var(--electric-blue);
+		} */
 	}
 
 	.tagline {
@@ -464,12 +468,13 @@ table tr th:last-child {
 }
 
 /****************************************************************************************************/
-/* 			MY WORK PROPERTIES				 */
+/* 			PORTFOLIO PROPERTIES				 */
 /* ┌──────────────────┬────────────────────┐ */
 /* │   Component(s) 	│   		File(s)  		 │ */
 /* ├──────────────────┼────────────────────┤ */
 /* │ Experience List  │ experience-list.js │ */
 /* └──────────────────┴────────────────────┘ */
+
 .experience-card {
 	position: relative;
 	display: flex;

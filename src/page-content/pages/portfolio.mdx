@@ -6,8 +6,10 @@ title: Portfolio
 
 import { ExperienceList } from "../../components/experience-list.js"
 import { GrGraphQl } from "react-icons/gr"
+import { RiFileDownloadLine } from "react-icons/ri"
 import { ExternalLink } from "../../components/ExternalLink.js"
 import { RepositoryList } from "../../components/RepositoryList.js"
+import resume from "../../../static/assets/Resume.pdf"
 
 ## Experience
 
@@ -25,11 +27,18 @@ been able to bring to industry.
   my **leadership** and **teamwork** skills.
 - Above all, being a student-athlete has taught me invaluable lessons about **discipline** and **hardwork**, two qualitites I strive to carry everywhere I go.
 
+<ExternalLink url={resume} className="button">
+  View/Download Resume
+  <span className="icon -right">
+    <RiFileDownloadLine />
+  </span>
+</ExternalLink>
+
 ## Projects
 
-### Showcase
+<!-- ### Showcase
 
-This section is currently a **WIP**.
+This section is currently a **WIP**. -->
 
 ### Repositories
 
@@ -37,6 +46,6 @@ I use GitHub for all of my Git needs including personal projects and larger clas
 
 <RepositoryList />
 
-## Testimonials
+<!-- ## Testimonials
 
-This section is currently a **WIP**.
+This section is currently a **WIP**. -->

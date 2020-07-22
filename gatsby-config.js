@@ -109,7 +109,7 @@ module.exports = {
         graphQLQuery: `
         query {
           viewer {
-            repositories(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
+            repositories(first: 9, orderBy: {field: CREATED_AT, direction: DESC}) {
               nodes {
                 id
                 name
