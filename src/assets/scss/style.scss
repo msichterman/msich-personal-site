@@ -664,11 +664,10 @@ table tr th:last-child {
 		max-width: 100%;
 		margin: 8px 0 16px;
 		padding: 16px;
-		border: 6px solid #a4a89760;
+		border: 6px solid var(--charcoal);
 		border-radius: 12px;
 		appearance: none;
 		font-size: 18px;
-		font-weight: 600;
 
 		&:focus {
 			border-color: var(--input-focus-border);
