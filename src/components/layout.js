@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Logo from "./logo"
 import Navigation from "./navigation"
+import ThemeToggle from "./ThemeToggle"
 
 import "../assets/scss/style.scss"
 import Footer from "./footer"
@@ -26,7 +27,10 @@ const Layout = ({ children, className }) => {
     <div className="primary-container">
       <Header>
         <Logo title={siteTitle} />
-        <Navigation />
+        <div className="flex">
+          <ThemeToggle />
+          <Navigation />
+        </div>
       </Header>
       <main className={`container${className ? " " + className : ""}`}>
         {children}

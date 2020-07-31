@@ -1,3 +1,5 @@
+@import "theme-variables";
+
 *,
 *:after,
 *:before {
@@ -26,10 +28,6 @@ main {
 }
 
 a {
-	color: var(--home-link-color);
+	color: var(--textLink);
 	text-decoration: none;
-
-	&:hover {
-		color: var(--home-link-hover-color);
-	}
 }

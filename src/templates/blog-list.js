@@ -102,13 +102,15 @@ class BlogIndex extends React.Component {
           title={"Blog — Page " + currentPage + " of " + numPages}
           description={"msich.dev blog page " + currentPage + " of " + numPages}
         />
-        <h1>Blog</h1>
-        <p>
-          Welcome to my blog, where I share useful insights, tips, and tricks
-          relating to my experiences with various technologies!
-        </p>
-        <div className="grids col-1 sm-2 lg-3">{posts}</div>
-        <Pagination {...props} />
+        <div className="wrapper">
+          <h1>Blog</h1>
+          <p>
+            Welcome to my blog, where I share useful insights, tips, and tricks
+            relating to my experiences with various technologies!
+          </p>
+          <div className="grids col-1 sm-2 lg-3">{posts}</div>
+          <Pagination {...props} />
+        </div>
       </Layout>
     )
   }
