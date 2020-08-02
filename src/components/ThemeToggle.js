@@ -9,7 +9,7 @@ function ThemeToggle() {
         <div
           role="button"
           tabIndex="0"
-          onClick={e => toggleTheme(theme === "light" ? "dark" : "light")}
+          onClick={() => toggleTheme(theme === "light" ? "dark" : "light")}
           onKeyDown={e =>
             e.keyCode === 13
               ? toggleTheme(theme === "light" ? "dark" : "light")

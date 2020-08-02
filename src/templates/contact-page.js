@@ -25,7 +25,7 @@ export const pageQuery = graphql`
 `
 
 const Contact = ({ data }) => {
-  const { mdx, site } = data // data.mdx holds your post data
+  const { mdx, site } = data
   const { frontmatter, body } = mdx
 
   return (
@@ -51,24 +51,24 @@ const Contact = ({ data }) => {
           <p>
             <label>
               Name
-              <input type="text" name="name" />
+              <input type="text" name="name" required />
             </label>
           </p>
           <p>
             <label>
               Email
-              <input type="email" name="email" />
+              <input type="email" name="email" required />
             </label>
           </p>
           <p>
             <label>
               Subject
-              <input type="text" name="subject" />
+              <input type="text" name="subject" required />
             </label>
           </p>
           <p>
             <label>
-              Message<textarea name="message"></textarea>
+              Message<textarea name="message" required></textarea>
             </label>
           </p>
           <p className="text-align-right">
