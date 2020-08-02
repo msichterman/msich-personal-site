@@ -17,7 +17,10 @@ function ThemeToggle() {
           }
           id="theme-toggle"
         >
-          {theme === "dark" || localStorage.getItem("theme") === "dark" ? (
+          {theme === "dark" ||
+          (typeof window !== "undefined"
+            ? localStorage.getItem("theme")
+            : null) === "dark" ? (
             <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
           ) : (
             <RiSunLine style={{ height: "100%", color: "orange" }} />
