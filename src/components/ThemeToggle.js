@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { RiSunLine, RiMoonClearLine } from "react-icons/ri"
 
@@ -17,10 +17,10 @@ function ThemeToggle() {
           }
           id="theme-toggle"
         >
-          {theme === "light" ? (
-            <RiSunLine style={{ height: "100%", color: "orange" }} />
-          ) : (
+          {theme === "dark" || localStorage.getItem("theme") === "dark" ? (
             <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
+          ) : (
+            <RiSunLine style={{ height: "100%", color: "orange" }} />
           )}
         </div>
       )}
