@@ -33,6 +33,22 @@
   transition: all 0.6s ease;
 }
 
+#theme-toggle {
+  display: flex;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  border: 0;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #111111;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
 /* Theming Variables */
 body {
   background-color: var(--bg);
@@ -146,6 +162,7 @@ body {
   }
 
   @media (max-width: $breakpoint-lg) {
+
     .menu-trigger,
     .icon-menu-line {
       display: flex;
@@ -165,7 +182,7 @@ body {
       }
     }
 
-    .menu-trigger.is-active + ul {
+    .menu-trigger.is-active+ul {
       display: block;
     }
 
@@ -285,7 +302,7 @@ body {
     width: 185px;
     white-space: nowrap;
 
-    + .button {
+    +.button {
       background-color: var(--white);
       color: var(--primary);
       box-shadow: 0px 0px 0px 2px var(--primary) inset;

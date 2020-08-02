@@ -15,17 +15,7 @@ function ThemeToggle() {
               ? toggleTheme(theme === "light" ? "dark" : "light")
               : null
           }
-          style={{
-            display: "flex",
-            placeItems: "center",
-            color: "white",
-            cursor: "pointer",
-            marginRight: "20px",
-            border: 0,
-            borderRadius: "50%",
-            padding: "10px",
-            backgroundColor: "#111111",
-          }}
+          id="theme-toggle"
         >
           {theme === "dark" ? (
             <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
