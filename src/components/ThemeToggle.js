@@ -17,10 +17,10 @@ function ThemeToggle() {
           }
           id="theme-toggle"
         >
-          {document.body.classList.contains("dark") ? (
-            <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
-          ) : (
+          {theme === "light" ? (
             <RiSunLine style={{ height: "100%", color: "orange" }} />
+          ) : (
+            <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
           )}
         </div>
       )}
