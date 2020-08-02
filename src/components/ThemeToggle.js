@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { RiSunLine, RiMoonClearLine } from "react-icons/ri"
+import { RiToggleLine, RiSunLine, RiMoonClearLine } from "react-icons/ri"
 
 function ThemeToggle() {
   return (
@@ -17,13 +17,12 @@ function ThemeToggle() {
           }
           id="theme-toggle"
         >
-          {theme === "dark" ||
-          (typeof window !== "undefined"
-            ? localStorage.getItem("theme")
-            : null) === "dark" ? (
+          {theme === "dark" ? (
             <RiMoonClearLine style={{ height: "100%", color: "yellow" }} />
-          ) : (
+          ) : theme === "light" ? (
             <RiSunLine style={{ height: "100%", color: "orange" }} />
+          ) : (
+            <RiToggleLine style={{ height: "100%", color: "var(--primary)" }} />
           )}
         </div>
       )}
