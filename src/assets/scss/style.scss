@@ -45,7 +45,7 @@
   background-color: #111111;
 
   &:focus {
-    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
