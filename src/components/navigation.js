@@ -12,12 +12,12 @@ const MenuItems = [
     title: "Portfolio",
   },
   {
-    path: "/blog",
-    title: "Blog",
-  },
-  {
     path: "/about",
     title: "About",
+  },
+  {
+    path: "/blog",
+    title: "Blog",
   },
   {
     path: "/contact",

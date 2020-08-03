@@ -1,6 +1,6 @@
 import React from "react"
 
-export const ExternalLink = ({ className, url, children }) => {
+export function ExternalLink({ className, url, children }) {
   return (
     <a
       className={className}

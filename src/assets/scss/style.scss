@@ -19,7 +19,7 @@
 }
 
 .dark {
-  --bg: #111111;
+  --bg: var(--sleep);
   --bgCard: var(--charcoal);
   --tableRow: var(--charcoal);
   --primary: var(--electric-blue);
@@ -28,7 +28,7 @@
   --textHeading: var(--white);
   --textNormal: var(--white);
   --textLink: var(--electric-blue);
-  --textLabel: rgba(255, 255, 255, 0.5);
+  --textLabel: rgba(255, 255, 255, 0.6);
 
   transition: all 0.6s ease;
 }
@@ -42,7 +42,7 @@
   border: 0;
   border-radius: 50%;
   padding: 10px;
-  background-color: #111111;
+  background-color: var(--sleep);
 
   &:active {
     outline: none;
@@ -59,6 +59,11 @@ body {
   background-color: var(--bg);
   color: var(--textNormal);
   transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin-top: 2em;
 }
 
 /* Utilities */
@@ -93,6 +98,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .margin-top {
@@ -326,6 +332,82 @@ body {
     .button:first-child {
       width: 100%;
     }
+  }
+}
+
+.home-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: hidden;
+  padding: 0 36px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50vw);
+
+  background-color: var(--primary);
+  color: var(--white);
+
+  h2 {
+    margin-top: 0
+  }
+
+  .home-form-text {
+    max-width: 400px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 891px) {
+    flex-direction: column;
+
+    h2 {
+      margin-top: 2em;
+    }
+
+    .home-form-text {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: var(--bgCard);
+    font-weight: 600;
+  }
+
+  .button {
+    background-color: var(--charcoal);
+    cursor: pointer;
+  }
+}
+
+.contact-form-home {
+  max-width: 400px;
+  width: 90%;
+  padding: 10px 0;
+
+  label {
+    color: var(--textLabel);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 4px 0;
+    padding: 8px;
+    border: 6px solid var(--secondary);
+    border-radius: 12px;
+    appearance: none;
+    font-size: 12px;
+
+    &:focus {
+      border-color: var(--charcoal);
+    }
+  }
+
+  textarea {
+    min-height: 100px;
   }
 }
 

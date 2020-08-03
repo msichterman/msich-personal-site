@@ -11,4 +11,4 @@ cta:
   cta2Link: /about
 ---
 
-I'm a 21-year-old full-stack web developer and student-athlete driven to make a dent in the <span role="img" aria-label="world">🌎</span>.
+I'm a 21-year-old full-stack web developer and student-athlete driven to make the <span role="img" aria-label="world">🌎&nbsp;</span> better through software.
