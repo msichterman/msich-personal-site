@@ -3,7 +3,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/mattsichterman?style=social)](https://twitter.com/mattsichterman)&emsp;
 [![Follow on GitHub](https://img.shields.io/github/followers/msichterman?label=Follow%20on%20Github&style=social)](https://github.com/msichterman)&emsp;
 
-# [MSICH](https://msich.netlify.app/)
+# [MSICH](https://msich.dev/)
 
 Welcome to my personal website and blog! Created with Gastby.js.
 
