@@ -3,7 +3,7 @@
     "title": "MSICH",
     "titleTemplate": "%s",
     "description": "Matt Sichterman's portfolio and blog covering everything full-stack JavaScript, AWS, and Serverless.",
-    "siteUrl": "https://msich.netlify.app/",
+    "siteUrl": "https://msich.dev/",
     "image": "/assets/Headshot-Square.jpg",
     "twitterUsername": "@mattsichterman"
   },

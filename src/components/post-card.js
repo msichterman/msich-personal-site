@@ -17,11 +17,9 @@ const PostCard = ({ data }) => (
         ""
       )}
       <div className="post-content">
-        <h2 className="title">
-          {data.frontmatter.title}
-        </h2>
+        <h2 className="title">{data.frontmatter.title}</h2>
         <p className="meta">
-          <time>{data.frontmatter.date}</time> - Matt Sichterman
+          <time>{data.frontmatter.date}</time>
         </p>
       </div>
     </article>

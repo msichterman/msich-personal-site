@@ -1,4 +1,5 @@
 const path = require("path")
+const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Handle of the Markdown files
@@ -38,10 +39,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   //const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const blogList = path.resolve(`./src/templates/blog-list.js`)
+  const tagTemplate = path.resolve("src/templates/tags.js")
 
   const result = await graphql(`
     {
-      allMdx(
+      postsRemark: allMdx(
         filter: { fields: { collection: { eq: "page-content" } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
@@ -52,8 +54,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
               template
               title
+              tags
             }
           }
+        }
+      }
+      tagsGroup: allMdx(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -65,8 +73,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  console.log(result)
+
   // Create blog posts
-  const posts = result.data.allMdx.edges
+  const posts = result.data.postsRemark.edges
 
   posts.forEach((post, index) => {
     const id = post.node.id
@@ -100,6 +110,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
+      },
+    })
+  })
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
+
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
       },
     })
   })
