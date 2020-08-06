@@ -23,7 +23,7 @@ const NotFound = () => (
         />
         <h1>Oops, that page does not exist</h1>
         <p>
-          You have wondered into the unknown! Let me help you, take a look at
+          You have wandered into the unknown! Let me help you, take a look at
           the options below{" "}
           <span role="img" aria-label="arrow down">
             ⬇️
