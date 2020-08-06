@@ -73,8 +73,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  console.log(result)
-
   // Create blog posts
   const posts = result.data.postsRemark.edges
 
