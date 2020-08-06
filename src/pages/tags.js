@@ -3,10 +3,14 @@ import PropTypes from "prop-types"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
+import ColorHash from "color-hash"
 
 // Components
-import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+
+var colorHash = new ColorHash()
 
 const Tags = ({
   data: {
@@ -16,21 +20,24 @@ const Tags = ({
     },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
-    <div>
+  <Layout className="page">
+    <SEO title={title} />
+    <div className="wrapper">
       <h1>Tags</h1>
-      <ul>
+      <div className="tag-list">
         {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
+          <Link key={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+            <div
+              className="tag"
+              style={{ background: colorHash.hex(tag.fieldValue) }}
+            >
+              {tag.fieldValue} <div className="tag-count">{tag.totalCount}</div>
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
-  </div>
+  </Layout>
 )
 
 Tags.propTypes = {
