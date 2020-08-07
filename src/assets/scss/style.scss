@@ -215,7 +215,8 @@ h2 {
       background: var(--primary);
       width: 100%;
       max-width: 320px;
-      border-radius: 0 0 0 12px;
+      border-radius: 0 0 0 8px;
+      box-shadow: -25px 10px 80px -41px rgba(0, 0, 0, 0.75);
       overflow: hidden;
     }
 
@@ -325,7 +326,7 @@ h2 {
     +.button {
       background-color: var(--white);
       color: var(--primary);
-      box-shadow: 0px 0px 0px 2px var(--primary) inset;
+      box-shadow: 0px 0px 0px 3px var(--primary) inset;
 
       &:hover {
         background-color: var(--secondary);
@@ -748,7 +749,7 @@ table tr th:last-child {
   padding: var(--padding) calc(var(--padding) * 1.25);
   background-color: var(--primary);
   color: var(--secondary);
-  border-radius: 12px;
+  border-radius: 8px;
   text-transform: capitalize;
   text-decoration: none;
   appearance: none;
@@ -801,6 +802,7 @@ table tr th:last-child {
   border-radius: 4px;
   margin: 0 8px 8px 0;
   width: auto;
+  font-weight: 500;
 
   &:hover {
     &:not(.no-link) {
@@ -871,8 +873,8 @@ table tr th:last-child {
     max-width: 100%;
     margin: 8px 0 16px;
     padding: 16px;
-    border: 6px solid var(--charcoal);
-    border-radius: 12px;
+    border: 4px solid var(--charcoal);
+    border-radius: 8px;
     appearance: none;
     font-size: 18px;
     background-color: var(--bgCard);
