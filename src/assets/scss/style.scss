@@ -155,7 +155,7 @@ h2 {
 
   ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-right: 20px;
   }
 
   a {
@@ -182,7 +182,6 @@ h2 {
   }
 
   @media (max-width: $breakpoint-lg) {
-
     .menu-trigger,
     .icon-menu-line {
       display: flex;
@@ -202,7 +201,7 @@ h2 {
       }
     }
 
-    .menu-trigger.is-active+ul {
+    .menu-trigger.is-active + ul {
       display: block;
     }
 
@@ -222,7 +221,7 @@ h2 {
 
     ul li {
       display: block;
-      margin-left: 0;
+      margin-right: 0;
     }
 
     a {
@@ -323,7 +322,7 @@ h2 {
     width: 185px;
     white-space: nowrap;
 
-    +.button {
+    + .button {
       background-color: var(--white);
       color: var(--primary);
       box-shadow: 0px 0px 0px 3px var(--primary) inset;
@@ -549,10 +548,10 @@ article figure {
 }
 
 article blockquote {
-  margin-left: 0;
+  margin-right: 0;
   padding: 5px 5px 5px 20px;
   background-color: #f2f2f2;
-  border-left: 3px solid rgba(0, 0, 0, 0.1);
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 article iframe {
@@ -622,7 +621,7 @@ table tr:last-child td {
 
 table tr td:first-child,
 table tr th:first-child {
-  border-left: 0;
+  border-right: 0;
 }
 
 table tr td:last-child,
@@ -778,10 +777,10 @@ table tr th:last-child {
     display: inline-flex;
 
     &.-right {
-      margin-left: var(--margin);
+      margin-right: var(--margin);
     }
 
-    &.-left {
+    &.-right {
       margin-right: var(--margin);
     }
   }
@@ -807,7 +806,7 @@ table tr th:last-child {
   &:hover {
     &:not(.no-link) {
       transform: scale(1.1);
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
   }
 }
@@ -824,7 +823,7 @@ table tr th:last-child {
   text-align: center;
   justify-content: center;
   margin: auto;
-  margin-left: 3px;
+  margin-right: 3px;
   background: var(--bg);
   color: var(--textLabel);
   font-size: 12px;
@@ -1021,6 +1020,6 @@ table tr th:last-child {
   }
 
   .copyright {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Octicon, { Law, Star } from "@githubprimer/octicons-react"
+
+import { LawIcon, StarIcon, LogoGithubIcon } from "@primer/octicons-react"
 import GitHubButton from "react-github-btn"
 import { RiExternalLinkLine } from "react-icons/ri"
 import { ExternalLink } from "./ExternalLink"
@@ -70,11 +71,11 @@ const RepositoryFooter = ({ repo }) => {
           })}
       </div>
       <FooterItem>
-        <Octicon icon={Star} /> {repo.stargazers.totalCount}
+        <StarIcon /> {repo.stargazers.totalCount}
       </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
-          <Octicon icon={Law} /> {repo.licenseInfo.name}
+          <LawIcon /> {repo.licenseInfo.name}
         </FooterItem>
       )}
       <FooterItem>Created: {createdAt}</FooterItem>
@@ -124,7 +125,10 @@ const RepositorySectionMaker = ({ data }) => (
       url="https://github.com/msichterman"
       className="button  margin-top"
     >
-      See more on GitHub
+      See more on{" "}
+      <span className="icon -right">
+        <LogoGithubIcon />
+      </span>
     </ExternalLink>
   </>
 )

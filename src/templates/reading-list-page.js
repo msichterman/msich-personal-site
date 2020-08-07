@@ -29,7 +29,7 @@ const ReadingListPage = ({ data }) => {
       <div className="wrapper">
         <h1>
           {frontmatter.title}{" "}
-          <span className="icon -left">
+          <span className="icon -right">
             <RiBookMarkLine />
           </span>
         </h1>

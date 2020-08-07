@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => {
       <div className="wrapper">
         <h1>
           {frontmatter.title}{" "}
-          <span className="icon -left">
+          <span className="icon -right">
             <RiContactsLine />
           </span>
         </h1>

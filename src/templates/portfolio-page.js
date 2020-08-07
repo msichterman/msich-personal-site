@@ -29,7 +29,7 @@ const PortfolioPage = ({ data }) => {
       <div className="wrapper">
         <h1>
           {frontmatter.title}{" "}
-          <span className="icon -left">
+          <span className="icon -right">
             <RiBriefcase5Line />
           </span>
         </h1>
