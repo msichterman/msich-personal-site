@@ -1,8 +1,8 @@
 ---
 template: blog-post
-slug: blog/test
-date: 2020-08-06T05:53:16.102Z
-title: "Test 2: Tag Test"
+slug: blog/test2
+date: 2020-08-07T05:53:16.102Z
+title: "Test 3: Tag Test 3"
 featuredImage: /assets/mike-dorner-sf_1ZDA1YFw-unsplash.jpg
 tags: ["markdown", "utility", "javascript", "react", "gatsby"]
 ---

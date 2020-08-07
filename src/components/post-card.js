@@ -1,6 +1,9 @@
 import React from "react"
+
+// Components
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import TagList from "../components/TagList"
 
 const PostCard = ({ data }) => (
   <Link to={data.frontmatter.slug}>
@@ -21,6 +24,7 @@ const PostCard = ({ data }) => (
         <p className="meta">
           <time>{data.frontmatter.date}</time>
         </p>
+        <TagList tags={data.frontmatter.tags} />
       </div>
     </article>
   </Link>

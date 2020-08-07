@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
+// Components
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { RiContactsLine } from "react-icons/ri"
 
 export const pageQuery = graphql`
   query AboutQuery($id: String!) {
@@ -25,7 +27,12 @@ const AboutPage = ({ data }) => {
     <Layout className="page">
       <SEO title={frontmatter.title} description={excerpt} />
       <div className="wrapper">
-        <h1>{frontmatter.title}</h1>
+        <h1>
+          {frontmatter.title}{" "}
+          <span className="icon -left">
+            <RiContactsLine />
+          </span>
+        </h1>
         <div>
           <MDXRenderer>{body}</MDXRenderer>
         </div>

@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { RiSendPlane2Line } from "react-icons/ri"
 
+// Components
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { RiSendPlane2Line, RiQuestionAnswerLine } from "react-icons/ri"
 
 export const pageQuery = graphql`
   query ContactQuery($id: String!) {
@@ -35,7 +36,12 @@ const Contact = ({ data }) => {
         description={frontmatter.title + " " + site.siteMetadata.title}
       />
       <div className="wrapper">
-        <h1>{frontmatter.title}</h1>
+        <h1>
+          {frontmatter.title}{" "}
+          <span className="icon -left">
+            <RiQuestionAnswerLine />
+          </span>
+        </h1>
         <div className="description">
           <MDXRenderer>{body}</MDXRenderer>
         </div>

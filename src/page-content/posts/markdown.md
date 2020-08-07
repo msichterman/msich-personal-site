@@ -2,7 +2,7 @@
 template: blog-post
 slug: blog/markdown
 date: 2020-05-09T05:53:16.102Z
-title: "Markdown: Syntax"
+title: "Test 1: Markdown Syntax"
 featuredImage: /assets/mike-dorner-sf_1ZDA1YFw-unsplash.jpg
 tags: ["markdown", "utility"]
 ---
