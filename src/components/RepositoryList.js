@@ -125,7 +125,7 @@ const RepositorySectionMaker = ({ data }) => (
       url="https://github.com/msichterman"
       className="button  margin-top"
     >
-      See more on{" "}
+      See more on
       <span className="icon -right">
         <LogoGithubIcon />
       </span>
