@@ -297,7 +297,7 @@ h2 {
   }
 
   .featured-image {
-    border-radius: 12px;
+    border-radius: 8px;
     max-width: 500px;
     margin: 0 auto;
   }
@@ -443,12 +443,12 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: var(--bgCard);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+  border-radius: 8px;
   transition: box-shadow 0.3s linear;
   height: 100%;
 
   .featured-image {
-    border-radius: 12px;
+    border-radius: 8px;
 
     img {
       display: block;
@@ -494,7 +494,7 @@ h2 {
     }
 
     .featured-image {
-      border-radius: 12px 12px 0 0;
+      border-radius: 8px 8px 0 0;
     }
   }
 
@@ -575,7 +575,7 @@ article img {
 .blog-post {
   .featured-image {
     min-height: 50vh;
-    border-radius: 12px;
+    border-radius: 8px;
   }
 }
 
@@ -642,7 +642,7 @@ table tr th:last-child {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   padding: 24px 16px 16px 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
