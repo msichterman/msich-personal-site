@@ -18,7 +18,7 @@ const TagsPage = ({
     <div className="wrapper">
       <h1>
         Tags{" "}
-        <span className="icon -left">
+        <span className="icon -right">
           <RiPriceTag3Line />
         </span>
       </h1>

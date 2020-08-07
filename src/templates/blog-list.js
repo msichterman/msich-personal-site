@@ -107,7 +107,7 @@ class BlogIndex extends React.Component {
         <div className="wrapper">
           <h1>
             Blog{" "}
-            <span className="icon -left">
+            <span className="icon -right">
               <RiMistLine />
             </span>
           </h1>
