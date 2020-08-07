@@ -9,7 +9,7 @@ Welcome to my personal website and blog! Created with Gastby.js.
 
 ## Motivation
 
-WIP
+The motivation for this site includes... WIP
 
 ## Technologies in Use
 
