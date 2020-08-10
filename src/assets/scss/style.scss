@@ -14,7 +14,7 @@
   --textNormal: var(--charcoal);
   --textLink: var(--electric-blue);
   --textLabel: rgba(0, 0, 0, 0.6);
-
+  --tagBg: #ffffff50;
   transition: all 0.6s ease;
 }
 
@@ -29,7 +29,7 @@
   --textNormal: var(--white);
   --textLink: var(--electric-blue);
   --textLabel: rgba(255, 255, 255, 0.6);
-
+  --tagBg: #11111150;
   transition: all 0.6s ease;
 }
 
@@ -795,6 +795,7 @@ table tr th:last-child {
 }
 
 .tag {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -803,6 +804,7 @@ table tr th:last-child {
   margin: 0 8px 8px 0;
   width: auto;
   font-weight: 500;
+  z-index: 2;
 
   &:hover {
     &:not(.no-link) {
@@ -810,6 +812,19 @@ table tr th:last-child {
       transition: all 0.3s ease;
     }
   }
+}
+
+.tag::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 4px;
+  z-index: -2;
+  background-color: var(--tagBg)
 }
 
 .no-link {
@@ -1028,6 +1043,5 @@ table tr th:last-child {
 
   .copyright {
     margin-right: 10px;
-
   }
 }
