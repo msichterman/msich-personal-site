@@ -23,7 +23,8 @@ export default function Tag({ tag }) {
         className="tag"
         style={{
           color: color,
-          backgroundColor: `${color}25`,
+          backgroundColor: `${color}35`,
+          border: `0.5px solid ${color}`,
         }}
       >
         {fieldValue}{" "}
@@ -43,7 +44,8 @@ export function TagNoLink({ tag }) {
       className="tag no-link"
       style={{
         color: color,
-        backgroundColor: `${color}25`,
+        backgroundColor: `${color}35`,
+        border: `1px solid ${color}`,
       }}
     >
       {fieldValue}{" "}
