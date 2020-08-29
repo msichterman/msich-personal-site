@@ -60,7 +60,7 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <div className="home-banner grids col-1 lg-2">
+      <div className="home-banner grids col-1 lg-2 top-container">
         <div className="hero-container">
           <h1 className="title">
             <span>{m}</span>
@@ -99,67 +99,71 @@ const HomePage = ({ data }) => {
         </div>
       </div>
       <div className="home-form-container">
-        <div className="home-form-text">
-          <h2>Get in Touch!</h2>
-          <p>
-            Looking for a mind to <strong>bounce ideas</strong> off of? Need a
-            new <strong>website</strong> to accelerate your business? Let's get
-            in contact.{" "}
-            <span role="img" aria-label="phone">
-              📲
-            </span>{" "}
-          </p>
-          <p>
-            Just send me a message using the form below or message me on{" "}
-            <ExternalLink url="https://twitter.com/mattsichterman">
-              Twitter
-            </ExternalLink>
-            .
-          </p>
+        <div className="home-form-max-width">
+          <div className="home-form-text">
+            <h2>Get in Touch!</h2>
+            <p>
+              Looking for a mind to <strong>bounce ideas</strong> off of? Need a
+              new <strong>website</strong> to accelerate your business? Let's
+              get in contact.{" "}
+              <span role="img" aria-label="phone">
+                📲
+              </span>{" "}
+            </p>
+            <p>
+              Just send me a message using the form below or message me on{" "}
+              <ExternalLink url="https://twitter.com/mattsichterman">
+                Twitter
+              </ExternalLink>
+              .
+            </p>
+          </div>
+          <form
+            className="contact-form-home"
+            action="/thanks"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Subject
+                <input type="text" name="subject" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Message<textarea name="message" required></textarea>
+              </label>
+            </p>
+            <p className="text-align-right">
+              <button className="button" type="submit">
+                Send it
+                <span className="icon -right">
+                  <RiSendPlane2Line />
+                </span>
+              </button>
+            </p>
+          </form>
         </div>
-        <form
-          className="contact-form-home"
-          action="/thanks"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-          </p>
-          <p>
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-          </p>
-          <p>
-            <label>
-              Subject
-              <input type="text" name="subject" required />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message<textarea name="message" required></textarea>
-            </label>
-          </p>
-          <p className="text-align-right">
-            <button className="button" type="submit">
-              Send it
-              <span className="icon -right">
-                <RiSendPlane2Line />
-              </span>
-            </button>
-          </p>
-        </form>
       </div>
-      <BlogListHome />
+      <div className="container">
+        <BlogListHome />
+      </div>
     </Layout>
   )
 }
