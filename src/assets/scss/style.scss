@@ -135,6 +135,7 @@ h2 {
   z-index: 5;
   top: 0;
   left: 0;
+  border-bottom: 4px solid var(--primary);
 }
 
 .site-header {
@@ -146,7 +147,6 @@ h2 {
   max-width: 1240px;
   padding: 0 20px;
   max-height: 90px;
-  border-bottom: 4px solid var(--primary);
 }
 
 .site-navigation {
