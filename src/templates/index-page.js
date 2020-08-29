@@ -2,7 +2,11 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { RiArrowRightSLine, RiSendPlane2Line } from "react-icons/ri"
+import {
+  RiBriefcase5Line,
+  RiContactsLine,
+  RiSendPlane2Line,
+} from "react-icons/ri"
 
 import Layout from "../components/layout"
 import BlogListHome from "../components/blog-list-home"
@@ -71,13 +75,13 @@ const HomePage = ({ data }) => {
             <Link to={frontmatter.cta.cta1Link} className="button">
               {frontmatter.cta.cta1Text}
               <span className="icon -right">
-                <RiArrowRightSLine />
+                <RiBriefcase5Line />
               </span>
             </Link>
             <Link to={frontmatter.cta.cta2Link} className="button">
               {frontmatter.cta.cta2Text}
               <span className="icon -right">
-                <RiArrowRightSLine />
+                <RiContactsLine />
               </span>
             </Link>
           </div>
