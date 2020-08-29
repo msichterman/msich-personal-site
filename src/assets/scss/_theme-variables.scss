@@ -1,7 +1,7 @@
 // breakpoints
 $breakpoint-mobile: 470px;
 $breakpoint-sm: 576px;
-$breakpoint-md: 850px;
+$breakpoint-md: 890px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
@@ -13,11 +13,13 @@ $breakpoint-xl: 1200px;
   --font-size-small: 12px;
 
   // Colors
-  --sleep: #111111;
+  --sleep: #121212;
   --charcoal: #333333;
   --electric-blue: #0892d0;
   --ice: #d9f2fe;
   --white: #ffffff;
+  --light-label: rgba(255, 255, 255, 0.6);
+  --dark-label: rgba(0, 0, 0, 0.6);
 
   // CSS Grid Utility
   --grid-gap: 30px;

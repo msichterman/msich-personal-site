@@ -8,9 +8,10 @@ export default function TagList(props) {
 
   return (
     <div className="tag-list">
-      {tags.map(tag => (
-        <Tag key={tag?.fieldValue ? tag.fieldValue : tag} tag={tag} />
-      ))}
+      {tags &&
+        tags.map(tag => (
+          <Tag key={tag?.fieldValue ? tag.fieldValue : tag} tag={tag} />
+        ))}
     </div>
   )
 }
