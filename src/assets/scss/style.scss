@@ -164,6 +164,10 @@ h2 {
   ul li {
     display: inline-block;
     margin-left: 20px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-left: 0;
+    }
   }
 
   a {
@@ -895,7 +899,7 @@ table tr th:last-child {
   padding: 50px 36px;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 0 20px;
+    padding: 50px 20px;
   }
 
   h1 {
