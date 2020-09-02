@@ -22,9 +22,8 @@ export default function Tag({ tag }) {
       <div
         className="tag"
         style={{
-          color: color,
-          backgroundColor: `${color}35`,
-          border: `0.5px solid ${color}`,
+          color: "var(--textTag)",
+          backgroundColor: `${color}`,
         }}
       >
         {fieldValue}{" "}
@@ -43,9 +42,8 @@ export function TagNoLink({ tag }) {
     <div
       className="tag no-link"
       style={{
-        color: color,
-        backgroundColor: `${color}35`,
-        border: `1px solid ${color}`,
+        color: "var(--textTag)",
+        backgroundColor: `${color}`,
       }}
     >
       {fieldValue}{" "}

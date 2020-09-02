@@ -13,8 +13,9 @@
   --textHeading: var(--charcoal);
   --textNormal: var(--charcoal);
   --textLink: var(--electric-blue);
-  --textLabel: rgba(0, 0, 0, 0.6);
-  --tagBg: #ffffff50;
+  --textLabel: var(--dark-label);
+  --textTag: var(--sleep);
+  --tagBg: #ffffff60;
   transition: all 0.6s ease;
 }
 
@@ -28,8 +29,9 @@
   --textHeading: var(--white);
   --textNormal: var(--white);
   --textLink: var(--electric-blue);
-  --textLabel: rgba(255, 255, 255, 0.6);
-  --tagBg: #11111150;
+  --textLabel: var(--light-label);
+  --textTag: var(--white);
+  --tagBg: #11111145;
   transition: all 0.6s ease;
 }
 
@@ -72,18 +74,18 @@ h2 {
   min-height: calc(100vh - 70px - 90px);
 }
 
-.container {
+.top-container {
   margin: 90px auto 0 auto;
+  max-width: 1240px;
+}
+
+.container {
+  margin: 0 auto;
   max-width: 1240px;
   padding: 0 36px;
 
-  p {
-    color: var(--textNormal);
-  }
-
-  hr {
-    border-color: var(--textLabel);
-    margin: 1em 0;
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 20px;
   }
 }
 
@@ -133,6 +135,7 @@ h2 {
   z-index: 5;
   top: 0;
   left: 0;
+  border-bottom: 4px solid var(--primary);
 }
 
 .site-header {
@@ -142,7 +145,12 @@ h2 {
   position: relative;
   margin: 0 auto;
   max-width: 1240px;
-  padding: 0 20px;
+  padding: 0 36px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 20px;
+  }
+
   max-height: 90px;
 }
 
@@ -155,7 +163,11 @@ h2 {
 
   ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-left: 20px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-left: 0;
+    }
   }
 
   a {
@@ -267,8 +279,20 @@ h2 {
 /* │ Home         │ index-page.js │ */
 /* └──────────────┴───────────────┘ */
 .home-banner {
-  padding: 60px 0;
+  padding: 60px 36px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 60px 20px;
+  }
+
   align-items: center;
+
+  .hero-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+
 
   .title {
     font-size: 48px;
@@ -285,8 +309,7 @@ h2 {
 
   .tagline {
     font-size: 24px;
-    margin-top: 0;
-    margin-top: 2px;
+    margin: 0;
     color: var(--textLabel);
   }
 
@@ -297,17 +320,22 @@ h2 {
   }
 
   .featured-image {
-    border-radius: 8px;
+    border-radius: 6px;
     max-width: 500px;
     margin: 0 auto;
   }
 
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-lg) {
     padding-top: 30px;
 
     div:nth-child(1) {
-      padding-bottom: 30px;
       grid-row: 2;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -324,40 +352,43 @@ h2 {
     white-space: nowrap;
 
     +.button {
-      background-color: var(--white);
-      color: var(--primary);
-      box-shadow: 0px 0px 0px 3px var(--primary) inset;
+      background-color: var(--charcoal);
+      color: var(--white);
 
       &:hover {
         background-color: var(--secondary);
+        color: var(--primary);
       }
     }
   }
 
   @media (max-width: $breakpoint-mobile) {
-    .button:nth-child(2) {
-      display: none;
-    }
+    flex-direction: column;
 
     .button:first-child {
       width: 100%;
     }
+
+    .button:nth-child(2) {
+      width: 100%;
+      margin-top: 1em;
+    }
   }
 }
 
-.home-form-container {
+.home-form-max-width {
+  max-width: 1240px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  overflow-x: hidden;
-  padding: 0 36px;
-  width: 100vw;
+  justify-content: space-between;
   position: relative;
-  left: 50%;
-  transform: translateX(-50vw);
-
-  background-color: var(--primary);
   color: var(--white);
+  padding: 0 36px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 20px;
+  }
 
   h2 {
     margin-top: 0;
@@ -366,6 +397,10 @@ h2 {
   .home-form-text {
     max-width: 400px;
     margin-right: 20px;
+
+    p {
+      color: var(--white);
+    }
   }
 
   @media (max-width: 891px) {
@@ -381,14 +416,18 @@ h2 {
   }
 
   a {
-    color: var(--bgCard);
+    color: var(--primary);
     font-weight: 600;
   }
 
   .button {
-    background-color: var(--charcoal);
+    background-color: var(--primary);
     cursor: pointer;
   }
+}
+
+.home-form-container {
+  background-color: var(--charcoal);
 }
 
 .contact-form-home {
@@ -397,7 +436,7 @@ h2 {
   padding: 10px 0;
 
   label {
-    color: var(--textLabel);
+    color: var(--light-label);
   }
 
   input,
@@ -414,7 +453,7 @@ h2 {
     color: var(--textNormal);
 
     &:focus {
-      border-color: var(--ice);
+      border-color: var(--primary);
     }
   }
 
@@ -443,12 +482,12 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.08);
   background-color: var(--bgCard);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  border-radius: 6px;
   transition: box-shadow 0.3s linear;
   height: 100%;
 
   .featured-image {
-    border-radius: 8px;
+    border-radius: 6px;
 
     img {
       display: block;
@@ -494,7 +533,7 @@ h2 {
     }
 
     .featured-image {
-      border-radius: 8px 8px 0 0;
+      border-radius: 6px 8px 0 0;
     }
   }
 
@@ -575,7 +614,7 @@ article img {
 .blog-post {
   .featured-image {
     min-height: 50vh;
-    border-radius: 8px;
+    border-radius: 6px;
   }
 }
 
@@ -642,7 +681,7 @@ table tr th:last-child {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   padding: 24px 16px 16px 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -749,7 +788,7 @@ table tr th:last-child {
   padding: var(--padding) calc(var(--padding) * 1.25);
   background-color: var(--primary);
   color: var(--secondary);
-  border-radius: 8px;
+  border-radius: 6px;
   text-transform: capitalize;
   text-decoration: none;
   appearance: none;
@@ -855,7 +894,13 @@ table tr th:last-child {
 .contact-page,
 .thanks-page,
 .not-found-page {
-  padding: 50px 20px;
+  margin: 90px auto 0 auto;
+  max-width: 1240px;
+  padding: 50px 36px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 50px 20px;
+  }
 
   h1 {
     color: var(--primary);
@@ -887,9 +932,9 @@ table tr th:last-child {
     width: 100%;
     max-width: 100%;
     margin: 8px 0 16px;
-    padding: 16px;
+    padding: 8px;
     border: 4px solid var(--charcoal);
-    border-radius: 8px;
+    border-radius: 6px;
     appearance: none;
     font-size: 18px;
     background-color: var(--bgCard);
@@ -978,7 +1023,9 @@ table tr th:last-child {
   }
 
   @media (max-width: $breakpoint-md) {
-    padding: 50px 0 ul {
+    padding: 50px 0;
+
+    ul {
       display: flex;
       justify-content: space-between;
     }

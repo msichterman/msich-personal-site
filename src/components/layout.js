@@ -32,9 +32,7 @@ const Layout = ({ children, className }) => {
           <Navigation />
         </div>
       </Header>
-      <main className={`container${className ? " " + className : ""}`}>
-        {children}
-      </main>
+      <main className={className}>{children}</main>
       <Footer />
     </div>
   )

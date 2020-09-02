@@ -172,7 +172,8 @@ export const RepositoryList = () => {
       render={data => {
         const repos = data.githubData.data.viewer.repositories.nodes.map(
           repo => {
-            return repo.name !== "msichterman" ? (
+            return repo.name !== "msichterman" &&
+              repo.name !== "csce-496-project" ? (
               <Repository key={repo.id} repo={repo} />
             ) : null
           }
