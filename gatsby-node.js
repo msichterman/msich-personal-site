@@ -37,7 +37,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  //const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const blogList = path.resolve(`./src/templates/blog-list.js`)
   const tagTemplate = path.resolve("src/templates/tag-info.js")
 
@@ -95,7 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  // Create blog-list pages
+  /* // Create blog-list pages
   const postsPerPage = 9
   const numPages = Math.ceil(posts.length / postsPerPage)
 
@@ -110,9 +109,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         currentPage: i + 1,
       },
     })
-  })
+  }) */
 
-  // Extract tag data from query
+  /* // Extract tag data from query
   const tags = result.data.tagsGroup.group
 
   // Make tag pages
@@ -124,5 +123,5 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         tag: tag.fieldValue,
       },
     })
-  })
+  }) */
 }

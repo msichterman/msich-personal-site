@@ -4,6 +4,8 @@
 *:after,
 *:before {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -23,7 +25,14 @@ code {
 
 main {
 	p {
-		line-height: 1.5;
+		line-height: 1.4;
+		font-size: clamp(16px, 3vw, 18px);
+	}
+
+	li {
+		font-size: 16px;
+		line-height: 1.3;
+		margin-bottom: 0.5em;
 	}
 }
 

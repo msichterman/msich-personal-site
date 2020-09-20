@@ -9,7 +9,7 @@ import {
 } from "react-icons/ri"
 
 import Layout from "../components/layout"
-import BlogListHome from "../components/blog-list-home"
+// import BlogListHome from "../components/blog-list-home"
 import SEO from "../components/seo"
 import { ExternalLink } from "../components/ExternalLink"
 
@@ -161,9 +161,9 @@ const HomePage = ({ data }) => {
           </form>
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <BlogListHome />
-      </div>
+      </div> */}
     </Layout>
   )
 }

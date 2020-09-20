@@ -6,6 +6,7 @@
 .light {
   --bg: var(--white);
   --bgCard: var(--white);
+  --bgForm: #dddddd;
   --tableRow: var(--ice);
   --primary: var(--electric-blue);
   --secondary: var(--ice);
@@ -22,6 +23,7 @@
 .dark {
   --bg: var(--sleep);
   --bgCard: var(--charcoal);
+  --bgForm: var(--charcoal);
   --tableRow: var(--charcoal);
   --primary: var(--electric-blue);
   --secondary: var(--ice);
@@ -181,6 +183,7 @@ h2 {
 
   a[aria-current="page"] {
     color: var(--white);
+    font-weight: 600;
   }
 
   .menu-trigger {
@@ -921,7 +924,8 @@ table tr th:last-child {
 }
 
 .contact-form {
-  margin-top: 36px;
+  margin: 36px auto 0 auto;
+  max-width: 600px;
 
   label {
     color: var(--textLabel);
@@ -933,11 +937,11 @@ table tr th:last-child {
     max-width: 100%;
     margin: 8px 0 16px;
     padding: 8px;
-    border: 4px solid var(--charcoal);
+    border: 4px solid var(--bg);
     border-radius: 6px;
     appearance: none;
     font-size: 18px;
-    background-color: var(--bgCard);
+    background-color: var(--bgForm);
     color: var(--textNormal);
 
     &:focus {
@@ -1069,6 +1073,8 @@ table tr th:last-child {
     margin: 0;
     height: auto;
     color: var(--white);
+    font-weight: bold;
+    font-style: italic;
   }
 
   .icon-container {
