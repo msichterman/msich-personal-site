@@ -630,6 +630,7 @@ article img {
   border-collapse: collapse;
   width: 100%;
   color: var(--textNormal);
+  font-size: clamp(16px, 3vw, 18px);
 
   th,
   td {
