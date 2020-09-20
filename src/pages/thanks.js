@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const Thanks = () => (
   <Layout className="thanks-page">
-    <SEO title="Thank you" />
+    <SEO title="MSICH — Thank you" />
     <div
       className="wrapper"
       style={{

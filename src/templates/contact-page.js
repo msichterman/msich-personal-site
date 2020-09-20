@@ -32,7 +32,7 @@ const Contact = ({ data }) => {
   return (
     <Layout className="contact-page">
       <SEO
-        title={frontmatter.title}
+        title={`MSICH — ${frontmatter.title}`}
         description={frontmatter.title + " " + site.siteMetadata.title}
       />
       <div className="wrapper">

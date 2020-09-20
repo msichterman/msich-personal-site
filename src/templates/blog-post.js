@@ -60,7 +60,7 @@ const Post = ({ data, pageContext }) => {
   return (
     <Layout className="page">
       <SEO
-        title={frontmatter.title}
+        title={`MSICH — ${frontmatter.title}`}
         description={
           frontmatter.description ? frontmatter.description : excerpt
         }

@@ -25,7 +25,7 @@ const UsesPage = ({ data }) => {
 
   return (
     <Layout className="page">
-      <SEO title={frontmatter.title} description={excerpt} />
+      <SEO title={`MSICH — ${frontmatter.title}`} description={excerpt} />
       <div className="wrapper">
         <h1>
           {frontmatter.title}{" "}
