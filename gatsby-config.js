@@ -47,7 +47,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gfm: true,
         plugins: [
           netlifyCmsPaths,
           `gatsby-remark-reading-time`,
