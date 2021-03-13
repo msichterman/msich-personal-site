@@ -3,7 +3,7 @@ company: Level Five Solutions
 website: http://www.levelfivesolutions.com/
 jobTitle: UI Developer
 startDate: August 2020
-endDate: Present
+endDate: March 2021
 description: Implement client websites with an intentional focus on user experience and the ultimate goal to create digital experiences for local favorites, big brands, and non-profits.
 backgroundImage: /assets/levelfive-background.jpg
 companyLogo: /assets/levelfive-logo.png
