@@ -26,7 +26,7 @@ const ExperienceCard = ({ data }) => (
     <Img
       fixed={data.frontmatter.companyLogo.childImageSharp.fixed}
       objectPosition="50% 50%"
-      alt={data.frontmatter.title + " - Logo"}
+      alt={data.frontmatter.company + " - Logo"}
       className="company-logo"
       style={{
         overflow: "visible",
