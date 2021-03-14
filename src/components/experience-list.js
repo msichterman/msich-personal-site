@@ -68,6 +68,7 @@ export const ExperienceList = () => {
             filter: {
               fields: { collection: { eq: "component-content/experiences" } }
             }
+            sort: { fields: [frontmatter___company], order: [ASC] }
           ) {
             edges {
               node {
