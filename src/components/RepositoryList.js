@@ -90,7 +90,7 @@ const RepositoryDescription = ({ repo }) => (
 
       {repo.homepageUrl && (
         <>
-          {" -"}{" "}
+          {repo.description && " - "}
           <ExternalLink url={repo.homepageUrl}>
             <strong>
               See it Live <RiExternalLinkLine />
