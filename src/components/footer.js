@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer-container">
     <div className="site-footer">
       <div className="copyright">
-        <p>© 2021 Matt Sichterman</p>
+        <p>© 2022 Matt Sichterman</p>
       </div>
       <div className="icon-container">
         <ExternalLink url="https://twitter.com/mattsichterman">
